@@ -9,8 +9,7 @@ st.title("📊 Rate Card Revenue & Margin Uplift Analyser")
 @st.cache_data
 def load_data():
     df = pd.read_excel("rate_card_data.xlsx")
-df.columns = df.columns.str.strip()  # Strip whitespace from headers
-
+    df.columns = df.columns.str.strip()  # Strip whitespace from headers
     return df
 
 df = load_data()
